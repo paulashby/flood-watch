@@ -21,7 +21,20 @@
     display: flex;
     background-color: #333;
   }
+
+  .form-control{
+    border-color: blue;
+    margin-left: auto;
+    border-style: solid;
+    border-color: #0af038;
+    
+  }
   
+  .input-group{
+    margin-right: 5%;
+    border-style: solid;
+    border-color: #0af038;
+  }
   
   
   /* Column container */
@@ -34,8 +47,12 @@
   /* Sidebar/left column */
   .lside {
     flex: 10%;
-    background-color: #01BB3E;
+    background-color: #00410D;
     padding: 20px;
+    margin-left: 1.9%;
+   
+    
+    
   }
   
   /* Main column */
@@ -43,13 +60,20 @@
     flex: 70%;
     background-color: #00410D;
     padding: 20px;
+
   }
   
   .rside {
     flex-wrap: wrap-reverse;
     flex: 10%;
-    background-color: #01BB3E;
+    background-color: #00410D;
     padding: 20px;
+    border-style: solid;
+    border: #07b229;
+    
+  
+    
+    
   }
   
   /* Fake image, just for this example */
@@ -57,7 +81,8 @@
     background-color: #aaa;
     width: 100%;
     padding: 20px;
-  }
+    border: 5px solid rgb(84, 120, 228);
+    
   
   
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -65,4 +90,19 @@
     .row, .navbar {   
       flex-direction: column;
     }
+  }
+
+  .fakeimg{
+    border-color: blue;
+  }
+
+  .header{
+    margin: auto;
+    background-color:rgb(116, 152, 53);
+
+  }
+
+  #logo{
+    width: fit-content;
+    align-self: flex-end;
   }
