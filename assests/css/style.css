@@ -1,4 +1,4 @@
-{
+ *{
     box-sizing: border-box;
   }
   
@@ -11,16 +11,18 @@
   /* Header/logo Title */
   .header {
     padding: 20px;
-    text-align: center;
-    background: #729A7C;
-    color: rgb(226, 17, 17);
+    text-align: left;
+    background: rgb(195, 150, 226);
+    border-style: solid;
+    border-color: #07b229;
+
   }
   
-  /* Style the top navigation bar */
+  /* Style the top navigation bar
   .navbar {
     display: flex;
-    background-color: #333;
-  }
+    background-color: violet;
+  } */
 
   .form-control{
     border-color: blue;
@@ -81,7 +83,7 @@
     background-color: #aaa;
     width: 100%;
     padding: 20px;
-    border: 5px solid rgb(84, 120, 228);
+    border: 5px solid rgb(16, 253, 28);
     
   
   
@@ -92,17 +94,9 @@
     }
   }
 
-  .fakeimg{
-    border-color: blue;
-  }
-
   .header{
     margin: auto;
     background-color:rgb(116, 152, 53);
-
   }
 
-  #logo{
-    width: fit-content;
-    align-self: flex-end;
-  }
+  
