@@ -16,7 +16,6 @@ var queryURL = "https://environment.data.gov.uk/flood-monitoring/id/floods";
   });
 
 
- 
     //get JSON from EA Flood Monitoring for 'isTidal'
     $.ajax({
         url: queryURL,
