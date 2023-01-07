@@ -2,7 +2,7 @@
 
 var queryURL = "https://environment.data.gov.uk/flood-monitoring/id/floods";
 
-  //get JSON for searched/stored city
+  //get JSON from EA Flood Monitoring for 'isTidal'
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -14,6 +14,32 @@ var queryURL = "https://environment.data.gov.uk/flood-monitoring/id/floods";
 
 
   });
+
+
+    //get JSON from EA Flood Monitoring for 'isTidal'
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function (response) {
+        // console.log(response);
+        console.log(response.items[0].isTidal);
+        // //logs the temperature of the first array item
+        // console.log(response.list[0].main.temp);
+    console.log(response.items);
+
+
+// jQuery loop over JSON result after AJAX Success (https://www.etutorialspoint.com/index.php/46-jquery-loop-over-json-result-after-ajax-success)
+
+
+
+// Then count all 'isTidal' key: values:
+
+        // if 'false' count
+
+        // if 'true' count
+
+
+      });
 
 // This is the script that renders each chart
 

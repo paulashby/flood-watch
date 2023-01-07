@@ -1,89 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flood_Watch_UK</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood_Watch_UK</title>
 
-        <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <!-- CSS LINK -->
-    <link rel="stylesheet" href="./assests/css/style.css">
-    <link rel=“stylesheet” href=“./assests/css/index.4b73268a.css”>
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="./assests/css/style.css">
+  <link rel=“stylesheet” href=“./assests/css/index.4b73268a.css”>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
 
 </head>
+
 <body>
 
-<!-- Header -->
-<div class="header">
-  <!-- logo goes here -->
-  <img id="logo" src="assets/images/flood-watch-logo.gif" alt="flood-watch-logo" width="250px">
-</div>
+  <!-- Header -->
+  <div class="header">
+    <!-- logo goes here -->
+    <img id="logo" src="assets/images/flood-watch-logo.gif" alt="flood-watch-logo" width="250px">
+  </div>
 
-<!-- The flexible grid (content) -->
-<div class="row">
-  <div class="lside">
-    <!-- <h2>About Me</h2>
+  <!-- The flexible grid (content) -->
+  <div class="row">
+    <div class="lside">
+      <!-- <h2>About Me</h2>
     <h5>Photo of me:</h5> -->
-    <div class="fakeimg" style="height:700px;">Data</div>
-    
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
-      </div>
-      <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-    </div>
-    <h3>More Text</h3>
-    <!-- <div class="fakeimg" style="height:60px;">Image</div><br> -->
-    <!-- <div class="fakeimg" style="height:60px;">Image</div><br> -->
-  </div>
+      <div class="fakeimg" style="height:700px;">Data</div>
 
-<!-- map area -->
-<div class="main">
-    <!-- <h2>TITLE HEADING</h2>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
+        </div>
+        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+          aria-describedby="button-addon1">
+      </div>
+      <h3>More Text</h3>
+      <!-- <div class="fakeimg" style="height:60px;">Image</div><br> -->
+      <!-- <div class="fakeimg" style="height:60px;">Image</div><br> -->
+    </div>
+
+    <!-- map area -->
+    <div class="main">
+      <!-- <h2>TITLE HEADING</h2>
+
     <h5>Title description, Dec 7, 2017</h5> -->
-    <div class="fakeimg" style="height:700px;">Map Area</div>
-    <p>Some text..</p>
-    
-<!-- Adding user-inputs -->
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Enter Texts Here" aria-label="Recipient's username" aria-describedby="basic-addon2">
-      <div class="input-group-append">
-        <span class="input-group-text" id="basic-addon2">Go</span>
+      <div class="fakeimg" style="height:700px;">Map Area</div>
+      <p>Some text..</p>
+
+      <!-- Adding user-inputs -->
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Enter Texts Here" aria-label="Recipient's username"
+          aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2">Go</span>
+        </div>
       </div>
     </div>
-</div>
+<!-- NB. body beackground-color should to be set to #00410D -->
+    <div class="rside" style="padding-right:40px; padding-left:20px;">
+      <div class="fakeimg backgroundGreen" style="background:#00410D; padding-top:10px; border-radius:10px;">
+        <h2 style="color:rgb(16, 253, 28);">CHARTS</h2>
 
-<div class="rside">
-  <!-- <h2>About Me</h2>
-  <h5>Photo of me:</h5> -->
-  <div class="fakeimg" style="height:700px;">Data</div>
-  <div class="input-group mb-3">
-   
-    <!-- input button -->
-    <div class="input-group-prepend">
-      <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
+        <div class="row chart" style="margin: 0;">
+          <div class="col">
+            <!-- My Chart #1 -->
+            <h6 style="color:rgb(16, 253, 28);">Tidal Floods</h6>
+            <div id="chartOne" style="min-width:150px;"></div>
+          </div>
+
+          <div class="col ">
+            <!-- My Chart #2 -->
+            <h6 style="color:rgb(16, 253, 28);">Tidal Floods</h6>
+            <div id="chartTwo" style="min-width:150px;"></div>
+          </div>
+
+          <div class="col">
+            <!-- My Chart #3 -->
+            <h6 style="color:rgb(16, 253, 28);">Tidal Floods</h6>
+            <div id="chartThree" style="min-width:150px;"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="input-group mb-3" style="background:#00410D; padding:10px; border-radius:10px; margin-top:10px;">
+        <!-- input button -->
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary" style="color:rgb(16, 253, 28); border-color:rgb(16, 253, 28);"
+            type="button" id="button-addon1">Button</button>
+        </div>
+        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+          aria-describedby="button-addon1">
+      </div>
     </div>
-    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
   </div>
+
+
+
   <!-- <h3>More Text</h3>
   <div class="fakeimg" style="height:60px;">Image</div><br>
   <div class="fakeimg" style="height:60px;">Image</div><br>
 </div> -->
 
-    
-    <!-- vanila JavaScript link -->
-<script src="./assests/js/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Bootsratp JS Link -->
-    <!-- jquery link -->
-<script type=“module” crossorigin src=“./assests/js/index.2d06ef2c.js”></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  <!-- vanila JavaScript link -->
+  <script src="./assests/js/script.js"></script>
+  <script src="./assests/js/charts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootsratp JS Link -->
+  <!-- jquery link -->
+  <script type=“module” crossorigin src=“./assests/js/index.2d06ef2c.js”></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+
 </body>
+
 </html>
