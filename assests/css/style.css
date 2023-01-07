@@ -180,6 +180,7 @@
    padding: 20px;
    margin: 0.25rem 0rem 1rem 0rem;
    border: 2px solid rgb(16, 253, 28);
+   box-shadow: 0px 0px 8px #4ff370;
    border-radius: 10px;
  }
 
