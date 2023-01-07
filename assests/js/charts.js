@@ -48,7 +48,7 @@
     chart: {
       type: 'bar'
     },
-    colors: ['#00410D', '#66DA26',],
+    colors: ['rgb(16, 253, 28)'],
     series: [{
       name: 'isTidal',
       data: [30,40]
@@ -68,7 +68,7 @@
     chart: {
       type: 'bar'
     },
-    colors: ['#00410D', '#66DA26',],
+    colors: ['rgb(16, 253, 28)'],
     series: [{
       name: 'sales',
       data: [30,40]
@@ -100,7 +100,7 @@
     ],
     fill: {
       type: "solid",
-      colors: ['#00410D'],
+      colors: ['rgb(16, 253, 28)'],
     },
     xaxis: {
       categories: [
