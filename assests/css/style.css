@@ -1,102 +1,292 @@
- *{
-    box-sizing: border-box;
-  }
-  
-  /* Style the body */
-  body {
-    font-family: Arial;
+ * {
+   box-sizing: border-box;
+ }
+
+ /* Style the body */
+ body {
+   min-height: 100vh;
+   font-family: Arial;
+   margin: 0;
+   background: #00410D;
+ }
+
+ /* Header/logo Title */
+ .header {
+   margin: auto;
+   padding: 20px;
+   text-align: left;
+   background-color: black;
+   /* background: #00410D; */
+   /* border-style: solid;
+    border-color: #07b229; */
+   /* background-color:rgb(116, 152, 53); */
+ }
+
+ p,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   color: rgb(16, 253, 28);
+ }
+
+ /* Class for buttons */
+ .btn-outline-secondary {
+   color: rgb(16, 253, 28);
+   border-color: rgb(16, 253, 28);
+ }
+
+ /* Class for buttons on hover */
+ .btn-outline-secondary:hover {
+   color: #00410D;
+   border-color: rgb(16, 253, 28);
+ }
+
+ .input-group {
+   /* display: flex;
+  justify-content: space-evenly; */
+   margin-right: 15px;
+ }
+
+ .row-no-wrap {
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
+   margin-right: 10px;
+ }
+
+ .input-group-tickbox {
+
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-align: center;
+   align-items: center;
+   padding: 0.187rem 0.3rem;
+   margin: 0px 0px 2px 0px;
+   /* margin-bottom: 0; */
+   /* font-size: 1rem; */
+   /* font-weight: 400; */
+   /* line-height: 1.5; */
+   gap: 5px;
+   color: rgb(16, 253, 28);
+   text-align: center;
+   white-space: nowrap;
+   background-color: black;
+   border: 1px solid rgb(16, 253, 28);
+   border-radius: 0.25rem;
+ }
+
+ .tickbox-fw {
+   margin: 0px 5px 0px 0px;
+ }
+
+ .form-control {
+   margin-left: auto;
+   border-style: solid;
+   border-color: #0af038;
+
+ }
+
+ /* .input-group-green {
+   margin-right: 5%;
+   border-style: solid;
+   border-color: #0af038;
+   background: #00410D;
+   padding: 10px;
+   border-radius: 10px;
+   margin-top: 10px;
+ } */
+
+
+ .btn:hover {
+
+   background: rgb(16, 253, 28);
+ }
+
+ /* Background colour for the input fields */
+ .form-control {
+   /* background: #8cf7a1; */
+ }
+
+ /* Makes the input field placeholder italics */
+ ::-webkit-input-placeholder {
+   font-style: italic;
+ }
+
+ :-moz-placeholder {
+   font-style: italic;
+ }
+
+ ::-moz-placeholder {
+   font-style: italic;
+ }
+
+ :-ms-input-placeholder {
+   font-style: italic;
+ }
+
+ /* Column container */
+ .row {
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   margin-right: 0;
+   margin-left: 0;
+ }
+
+ /* Create two unequal columns that sits next to each other */
+ /* Sidebar/left column */
+ .lside {
+   flex: 10%;
+   background-color: #00410D;
+   padding: 1rem 1.5rem 1rem 1.5rem;
+   margin-left: 1rem;
+   /* padding-left: 40px; */
+
+ }
+
+ /* Main column */
+ .main {
+   flex: 70%;
+   background-color: #00410D;
+   padding: 1rem 0rem 1rem 0rem;
+
+ }
+
+ .rside {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+   margin-right: 1rem;
+   flex-wrap: wrap-reverse;
+   flex: 10%;
+   background-color: #00410D;
+   border-style: solid;
+   border: #07b229;
+ }
+
+ .lower {
+   flex: 100%;
+   background-color: #00410D;
+   padding: 0px 20px 0px 20px;
+   margin: 0px 20px 0px 20px;
+
+ }
+
+ /* Fake image, just for this example */
+ .fakeimg {
+   /* background-color: #aaa; */
+   width: 100%;
+   Height: 100%;
+   padding: 20px;
+   margin: 0.25rem 0rem 1rem 0rem;
+   border: 2px solid rgb(16, 253, 28);
+   border-radius: 10px;
+ }
+
+ /* Charts */
+ #chartOne,
+ #chartTwo,
+ #chartThree {
+   min-width: 150px;
+ }
+
+ /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 700px) {
+
+   .row,
+   .navbar {
+     flex-direction: column;
+   }
+ }
+
+ /* Shimmering text */
+ /* 
+   body {
     margin: 0;
-  }
-  
-  /* Header/logo Title */
-  .header {
-    padding: 20px;
-    text-align: left;
-    background: rgb(195, 150, 226);
-    border-style: solid;
-    border-color: #07b229;
-
-  }
-  
-  /* Style the top navigation bar
-  .navbar {
+    height: 100vh;
     display: flex;
-    background-color: violet;
-  } */
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+} */
 
-  .form-control{
-    border-color: blue;
-    margin-left: auto;
-    border-style: solid;
-    border-color: #0af038;
-    
-  }
-  
-  .input-group{
-    margin-right: 5%;
-    border-style: solid;
-    border-color: #0af038;
-  }
-  
-  
-  /* Column container */
-  .row {  
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  /* Create two unequal columns that sits next to each other */
-  /* Sidebar/left column */
-  .lside {
-    flex: 10%;
-    background-color: #00410D;
-    padding: 20px;
-    margin-left: 1.9%;
-   
-    
-    
-  }
-  
-  /* Main column */
-  .main {
-    flex: 70%;
-    background-color: #00410D;
-    padding: 20px;
+ .neon {
+   position: relative;
+   overflow: hidden;
+   filter: brightness(200%);
+   width: 368.47px;
+   height: 56px;
+ }
 
-  }
-  
-  .rside {
-    flex-wrap: wrap-reverse;
-    flex: 10%;
-    background-color: #00410D;
-    padding: 20px;
-    border-style: solid;
-    border: #07b229;
-    
-  
-    
-    
-  }
-  
-  /* Fake image, just for this example */
-  .fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-    border: 5px solid rgb(16, 253, 28);
-    
-  
-  
-  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 700px) {
-    .row, .navbar {   
-      flex-direction: column;
-    }
-  }
+ .text {
+   background-color: black;
+   color: white;
+   font-size: 50px;
+   font-weight: bold;
+   font-family: sans-serif;
+   text-transform: uppercase;
+   position: relative;
+   user-select: none;
+   line-height: 56px;
+ }
 
-  .header{
-    margin: auto;
-    background-color:rgb(116, 152, 53);
-  }
+ .text::before {
+   content: attr(data-text);
+   position: absolute;
+   color: white;
+   filter: blur(0.02em);
+   mix-blend-mode: difference;
+ }
 
-  
+ .gradient {
+   position: absolute;
+   background: linear-gradient(45deg, #07b229, green, #00410D);
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   mix-blend-mode: multiply;
+ }
+
+ .spotlight {
+   position: absolute;
+   top: -100%;
+   left: -100%;
+   right: 0;
+   bottom: 0;
+   background:
+     radial-gradient(circle,
+       white,
+       transparent 25%) center / 25% 25%,
+     radial-gradient(circle,
+       white,
+       #00410D 0%) center / 12.5% 12.5%;
+   animation: light 5s linear infinite;
+   mix-blend-mode: color-dodge;
+ }
+
+ @keyframes light {
+   to {
+     transform: translate(50%, 50%);
+   }
+ }
+
+ footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 2.5rem;
+
+   text-align: left;
+   background-color: black;
+   /* background: #00410D; */
+   /* border-style: solid;
+     border-color: #07b229; */
+   /* background-color:rgb(116, 152, 53); */
+ }
+
+ .copyright-text {
+   padding-bottom: 20px;
+   background-color: black;
+   padding: 20px;
+ }
