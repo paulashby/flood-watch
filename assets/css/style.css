@@ -126,6 +126,12 @@
    font-style: italic;
  }
 
+ /* Peripheral elements sit in front of map */
+ .fore {
+  position: relative;
+  z-index: 1;
+ }
+
  /* Column container */
  .row {
    display: flex;
@@ -151,7 +157,7 @@
    flex: 70%;
    background-color: #00410D;
    padding: 1rem 0rem 1rem 0rem;
-
+   visibility: hidden;
  }
 
  .rside {
@@ -280,6 +286,7 @@
 
    text-align: left;
    background-color: black;
+
    /* background: #00410D; */
    /* border-style: solid;
      border-color: #07b229; */

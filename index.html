@@ -11,7 +11,7 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <!-- CSS LINKS -->
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel=“stylesheet” href=“./assets/css/index.4b73268a.css”>
+  <link rel="stylesheet" href="/assets/css/index.4b73268a.css">
   <!-- Script for Charts -->
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
@@ -19,7 +19,7 @@
 <body>
 
   <!-- Header -->
-  <div class="header">
+  <div class="header fore">
     <!-- Flood Watch Shimmering Logo -->
     <div class="row">
       <div class="col">
@@ -80,9 +80,12 @@
     </div>
   </div>
 
+  <!-- OpenLayers map -->
+  <div id="map" class="map"></div>
+
   <!-- The flexible grid (content) -->
   <!-- Left-side Panel -->
-  <div class="row">
+  <div class="row fore">
     <div class="lside">
       <div class="fakeimg">
         <p>Data</p>
@@ -119,7 +122,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row fore">
     <div class="lower">
       <div class="fakeimg">
         <p>Data</p>
@@ -137,12 +140,10 @@
   <!-- Local JS links -->
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/charts.js"></script>
+  <script src="./data/flood-areas.js"></script>
 
-  <!-- jquery links -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
+  <!-- jquery link -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
   <!-- Bootstrap JS Links -->
   <script type=“module” crossorigin src=“./assets/js/index.2d06ef2c.js”></script>
@@ -152,6 +153,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
     crossorigin="anonymous"></script>
+
+  <!-- OpenLayers map link -->
+  <script type="module" crossorigin src="./assets/js/index.8eba4519.js"></script>
 
 </body>
 
