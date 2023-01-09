@@ -43,7 +43,7 @@ $.ajax({
 
   var numberOfFloodsEl = document.getElementById('numberOfFloods');
 
-  numberOfFloodsEl.innerHTML += ('There are ' + numberOfFloods + ' flood warnings in place');
+  numberOfFloodsEl.innerHTML += ('There are ' + numberOfFloods + ' flood warnings in place today');
 
   // sets the colour of #numberOfFloods
   numberOfFloodsEl.setAttribute('style', 'color: rgb(16, 253, 28);')
@@ -114,7 +114,7 @@ $.ajax({
       toolbar: {
         show: false,
       },
-      height: '25%'
+      height: '40%'
     },
 
     grid: {
@@ -200,7 +200,97 @@ $.ajax({
   // Chart #3
   var options = {
     chart: {
-      height: 280,
+      type: 'bar',
+      toolbar: {
+        show: false,
+      },
+      height: '40%'
+    },
+
+    grid: {
+      show: true,
+      borderColor: 'rgba(16, 253, 28, 0.25)',
+      strokeDashArray: 0,
+      position: 'back',
+      xaxis: {
+        lines: {
+          show: true
+        }
+      },
+      yaxis: {
+        lines: {
+          show: true
+        }
+      },
+      row: {
+        colors: undefined,
+        opacity: 0.5
+      },
+      column: {
+        colors: undefined,
+        opacity: 0.5
+      },
+      padding: {
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0
+      },
+    },
+    colors: ['rgba(16, 253, 28, 0.25)'],
+    stroke: {
+      show: true,
+      curve: 'smooth',
+      lineCap: 'butt',
+      colors: ['rgb(16, 253, 28)'],
+      width: 2,
+      dashArray: 0,
+    },
+    series: [{
+      name: 'isTidal',
+      data: [numberOfFloods]
+    }],
+    xaxis: {
+      categories: ['Number'],
+      labels: {
+        show: false,
+      }
+    },
+    yaxis: {
+      categories: ['Number'],
+      labels: {
+        show: true,
+        style: {
+          colors: ['rgba(16, 253, 28, 0.5)'],
+          fontSize: '12px',
+          fontFamily: 'Helvetica, Arial, sans-serif',
+          fontWeight: 400,
+          cssClass: 'apexcharts-xaxis-label',
+        },
+        offsetX: -10,
+        offsetY: 0,
+      },
+      axisBorder: {
+        show: false,
+        color: '#000000',
+        height: 0,
+        width: 0,
+        offsetX: 0,
+        offsetY: 0
+      },
+    }
+
+
+  }
+
+  var chart = new ApexCharts(document.querySelector("#chartThree"), options);
+
+  chart.render();
+
+    // Chart #4
+  var options = {
+    chart: {
+      height: '40%',
       type: "area",
       toolbar: {
         show: false,
@@ -297,7 +387,7 @@ $.ajax({
 
   };
 
-  var chart = new ApexCharts(document.querySelector("#chartThree"), options);
+  var chart = new ApexCharts(document.querySelector("#chartFour"), options);
 
 
   chart.render();
