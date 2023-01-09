@@ -207,7 +207,8 @@
  /* Charts */
  #chartOne,
  #chartTwo,
- #chartThree {
+ #chartThree,
+ #chartFour {
    min-width: 150px;
  }
 
