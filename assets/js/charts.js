@@ -43,7 +43,7 @@ $.ajax({
 
   var numberOfFloodsEl = document.getElementById('numberOfFloods');
 
-  numberOfFloodsEl.innerHTML += ('There are ' + numberOfFloods + ' flood warnings in place');
+  numberOfFloodsEl.innerHTML += ('There are ' + numberOfFloods + ' flood warnings in place today');
 
   // sets the colour of #numberOfFloods
   numberOfFloodsEl.setAttribute('style', 'color: rgb(16, 253, 28);')
