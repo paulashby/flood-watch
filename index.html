@@ -35,12 +35,12 @@
       </div>
       <!-- Location Input -->
       <div class="col">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3" id="location">
           <div class="input-group-prepend">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon1">Location</button>
+            <button class="btn btn-outline-secondary" type="button" id="location-btn">Location</button>
           </div>
-          <input type="text" class="form-control" placeholder="Type Here" aria-label="Example text with button addon"
-            aria-describedby="button-addon1">
+          <input type="text" class="form-control" placeholder="Town, city or county" aria-label="Example text with button addon"
+            aria-describedby="location-btn" id="location-input">
         </div>
       </div>
       <!-- Severity Level Inputs -->
@@ -145,6 +145,7 @@
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/charts.js"></script>
   <script src="./data/flood-areas.js"></script>
+  <script src="./assets/js/controller.js"></script>
 
   <!-- jquery link -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
