@@ -31,13 +31,17 @@
    color: rgb(16, 253, 28);
  }
 
- /* Class for buttons */
+ .titles {
+  color: rgb(16, 253, 100);
+ }
+
+ /* Class for user buttons */
  .btn-outline-secondary {
    color: rgb(16, 253, 28);
    border-color: rgb(16, 253, 28);
  }
 
- /* Class for buttons on hover */
+ /* Class for user input buttons on hover */
  .btn-outline-secondary:hover {
    color: #00410D;
    border-color: rgb(16, 253, 28);
@@ -47,6 +51,7 @@
    /* display: flex;
   justify-content: space-evenly; */
    margin-right: 15px;
+   justify-content: center;
  }
 
  .row-no-wrap {
@@ -104,6 +109,14 @@
    background: rgb(16, 253, 28);
  }
 
+
+  .btn-wide {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    padding:0.375rem 2.5rem;
+  }
+
  /* Background colour for the input fields */
  .form-control {
    /* background: #8cf7a1; */
@@ -144,7 +157,7 @@
  /* Create two unequal columns that sits next to each other */
  /* Sidebar/left column */
  .lside {
-   flex: 10%;
+   flex: 14%;
    /* background-color: #00410D; */
    padding: 1rem 1.5rem 1rem 1.5rem;
    margin-left: 1rem;
@@ -154,7 +167,8 @@
 
  /* Main column */
  .main {
-   flex: 70%;
+  /* changes the width of the right & left panels by changing the width of the main */
+   flex: 60%; 
    background-color: #00410D;
    padding: 1rem 0rem 1rem 0rem;
    visibility: hidden;
@@ -164,7 +178,7 @@
   padding: 1rem 1.5rem 1rem 1.5rem;
    margin-right: 1rem;
    flex-wrap: wrap-reverse;
-   flex: 10%;
+   flex: 11%;
    /* background-color: #00410D; */
    border-style: solid;
    border: #07b229;
