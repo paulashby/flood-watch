@@ -36,8 +36,8 @@
           <div class="input-group-prepend">
             <button class="btn btn-outline-secondary" type="button" id="location-btn">Location</button>
           </div>
-          <input type="text" class="form-control" placeholder="Town, city or county" aria-label="Example text with button addon"
-            aria-describedby="location-btn" id="location-input">
+          <input type="text" class="form-control" placeholder="Town, city or county"
+            aria-label="Example text with button addon" aria-describedby="location-btn" id="location-input">
         </div>
       </div>
       <!-- Severity Level Inputs -->
@@ -46,7 +46,6 @@
           <!-- Level 1 -->
           <div class="input-group-prepend">
             <div class="input-group-tickbox">
-
               <p class="tickbox-fw">Severity Level 1</p>
               <input type="checkbox" aria-label="Checkbox for following text input">
             </div>
@@ -86,7 +85,23 @@
   <div class="row fore">
     <div class="lside">
       <div class="fakeimg">
-        <p>Data</p>
+        <h2><strong>CHARTS</strong></h2>
+        <div class="row">
+          <div class="col">
+
+
+            <!-- My Chart #1 -->
+
+            <!-- My Chart #2 -->
+            <h6>#2</h6>
+            <div id="chartTwo"></div>
+            &nbsp;
+            <!-- My Chart #3 -->
+            <h6>#3</h6>
+            <div id="chartThree"></div>
+
+          </div>
+        </div>
       </div>
     </div>
 
@@ -100,36 +115,67 @@
     <!-- Right-side Panel -->
     <div class="rside">
       <div class="fakeimg">
-        <h2>CHARTS</h2>
+        <h4 class="titles mb-4"><strong>AGGREGATED DATA</strong></h4>
+        <h6 class="titles mb-2"><strong>NUMBER OF WARNINGS</strong></h6>
+
+        <div id="numberOfFloods"></div>
+        &nbsp;
+        <h6 class="titles mb-0"><strong>TIDAL vs NON-TIDAL</strong></h6>
+        &nbsp;
+        <div class="mb-4" id="chartOne"></div>
+        &nbsp;
+        <h4 class="titles mb-4"><strong>SEARCH HISTORY</strong></h4>
         <div class="row">
           <div class="col">
-            &nbsp;
-            <div id="numberOfFloods"></div>
-            &nbsp;
-            <!-- My Chart #1 -->
-            <h6>#1</h6>
-            <div id="chartOne"></div>
-            &nbsp;
-            <!-- My Chart #2 -->
-            <h6>#2</h6>
-            <div id="chartTwo"></div>
-            &nbsp;
-            <!-- My Chart #3 -->
-            <h6>#3</h6>
-            <div id="chartThree"></div>
+
+            <!-- First Search History Button -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary btn-wide" type="button" id="searchHistoryOne-btn">History #1</button>
+              </div>
+            </div>
+
+            <!-- Second Search History Button -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary btn-wide" type="button" id="searchHistoryTwo-btn">History #2</button>
+              </div>
+            </div>
+
+            <!-- Third Search History Button -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary btn-wide" type="button" id="searchHistoryThree-btn">History #3</button>
+              </div>
+            </div>
+
+            <!-- Fourth Search History Button -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary btn-wide" type="button" id="searchHistoryFour-btn">History #4</button>
+              </div>
+            </div>
+
+            <!-- Fifth Search History Button -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary btn-wide" type="button" id="searchHistoryFive-btn">History #5</button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row fore">
+  <!-- <div class="row fore">
     <div class="lower">
       <div class="fakeimg">
         <p>Data</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Footer -->
   <footer>
@@ -140,7 +186,8 @@
 
   <!-- Script for Charts & Ajax-->
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
   <!-- Local JS links -->
   <script src="./assets/js/script.js"></script>
