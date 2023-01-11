@@ -68,6 +68,9 @@ $.ajax({
   var options = {
     series: [numberOfFloods],
     chart: {
+      // events: {
+      //   animationEnd: onAnimationEnd
+      // },
       type: 'donut',
     },
     colors: ['rgba(16, 253, 28, 0.25)'],
@@ -105,7 +108,13 @@ $.ajax({
 
   var chart = new ApexCharts(document.querySelector("#chartOne"), options);
 
-  chart.render();
+  chart.render()
+    .then(function () {
+      // Trigger event for map which needs to resize
+      $(window).trigger("chartRendered");
+    }).catch(function (e) {
+      console.log(116);
+  });
 
   // Chart #2
   var options = {
