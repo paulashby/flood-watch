@@ -1,11 +1,16 @@
- * {
+@font-face {
+  src: url(../fonts/digital-7.ttf);
+  font-family: digital;
+}
+
+* {
    box-sizing: border-box;
  }
 
  /* Style the body */
  body {
    min-height: 100vh;
-   font-family: Arial;
+   font-family: digital;
    margin: 0;
    background: #00410D;
  }
@@ -84,6 +89,14 @@
 
  .tickbox-fw {
    margin: 0px 5px 0px 0px;
+ }
+
+ #severity-filters {
+  cursor: pointer;
+ }
+
+ #severity-filters input[type=checkbox] {
+  display: none;
  }
 
  .form-control {
