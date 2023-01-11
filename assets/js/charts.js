@@ -74,7 +74,6 @@ $.ajax({
 
     var severity = response.items.map((item) => item.severityLevel);
 
-
     var severity1 = 1;
     var severity2 = 2;
     var severity3 = 3;
@@ -90,6 +89,7 @@ $.ajax({
 
       if (severity[i] == severity1) {
         counter1++;
+      }
 
       else if (severity[i] == severity2) {
         counter2++;
@@ -99,12 +99,11 @@ $.ajax({
         counter3++;
       }
 
-
       else if (severity[i] == severity4) {
         counter4++;
       }
-        
-          };
+
+    };
     console.log("Number of severity level 1 flood events " + counter1);
     console.log("Number of severity level 2 flood events " + counter2);
     console.log("Number of severity level 3 flood events " + counter3);
@@ -118,41 +117,8 @@ $.ajax({
     // console.log(severity.length);
 
     //create an array from the results
-        
-  // This is the script that renders each chart
-
-  // Chart #1 - Number of Floods
-  var options = {
-    series: [numberOfFloods],
-    chart: {
-      type: 'donut',
-    },
-    colors: ['rgba(16, 253, 28, 0.25)'],
-    stroke: {
-      show: true,
-      curve: 'smooth',
-      lineCap: 'butt',
-      colors: ['rgb(16, 253, 28)'],
-      width: 2,
-      dashArray: 0,
-    },
-    dataLabels: {
-      enabled: true,
-      enabledOnSeries: undefined,
-      formatter: function (val, opts) {
-        return val
-
-      }
 
 
-
-  chart.render()
-    .then(function () {
-      // Trigger event for map which needs to resize
-      $(window).trigger("chartRendered");
-    }).catch(function (e) {
-      console.log(116);
-  });
 
 
     // This is the script that renders each chart
