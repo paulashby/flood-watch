@@ -17,18 +17,29 @@ $.ajax({
   // var objectValues = Object.values(response.items[0])
   // console.log(objectValues);
   var numberOfFloods = response.items.length
+
+  // var counterTidal = 0;
   // console.log(numberOfFloods);
 
 
-  // // go through the array (as Paul mentioned)
-  // var description = "";
-  // response.items.forEach(item => { 
-  //  description += item.description;
-  // });
-  // console.log(description);
+  var isTidal = "";
+  var isTidalTrue = "";
+  var isTidalEl = response.items.map((item) => item.isTidal);
+  // console.log(isTidalEl);
+  for (var i = 0; i < isTidalEl.length; i++) {
 
-  // var keys = Object.keys(response.items[0]);
-  // console.log(keys);
+    if (isTidalEl[i] == false) {
+      isTidal++;
+    }
+    // console.log(isTidal);
+
+    else if (isTidalEl[i] == true) {
+      isTidalTrue++;
+    }
+    // console.log(isTidalTrue);
+
+  };
+
 
   //Append 'Number of Floods' to #numberOfFloods
 
@@ -38,7 +49,7 @@ $.ajax({
   numberOfFloodsEl.innerHTML += (numberOfFloods);
 
   // sets the colour of #numberOfFloods
-  
+
   // numberOfFloodsEl.setAttribute('style', 'color: rgb(16, 253, 28);')
 
   numberOfFloodsEl.setAttribute('style', 'color: rgb(16, 253, 28); font-size: 50px;')
@@ -125,12 +136,12 @@ $.ajax({
 
     // Chart #1 - Number of Floods
     var options = {
-      series: [numberofValues],
+      series: [isTidal, isTidalTrue],
       chart: {
         type: 'donut',
         redrawOnWindowResize: true
       },
-      colors: ['rgba(16, 253, 28, 0.25)'],
+      colors: ['rgba(16, 253, 28, 0.25)', 'rgba(16, 253, 28, 0.5)'],
       stroke: {
         show: true,
         curve: 'smooth',
@@ -140,7 +151,7 @@ $.ajax({
         dashArray: 0,
       },
       dataLabels: {
-        enabled: true,
+        enabled: false,
         enabledOnSeries: undefined,
         formatter: function (val, opts) {
           return val
@@ -167,14 +178,13 @@ $.ajax({
     var chart = new ApexCharts(document.querySelector("#chartOne"), options);
 
     chart.render()
-      .then(function () {
-        // Trigger event for map which needs to resize
-        $(window).trigger("chartRendered");
-        }).catch(function (e) {
-        console.log(116);
-    });
 
-
+.then(function () {
+  // Trigger event for map which needs to resize
+  $(window).trigger("chartRendered");
+  }).catch(function (e) {
+  console.log(116);
+});
 
 
     // Chart #2
@@ -228,7 +238,7 @@ $.ajax({
         dashArray: 0,
       },
       series: [{
-        name: 'Severity',
+        name: 'Severity Level Events',
         data: [counter1, counter2, counter3, counter4]
       }],
       xaxis: {
@@ -239,31 +249,31 @@ $.ajax({
             colors: ['rgba(16, 253, 28, 0.5)', 'rgba(16, 253, 28, 0.5)', 'rgba(16, 253, 28, 0.5)', 'rgba(16, 253, 28, 0.5)'],
           },
         },
+      },
+      yaxis: {
+        categories: ['Number'],
+        labels: {
+          show: true,
+          style: {
+            colors: ['rgba(16, 253, 28, 0.5)'],
+            fontSize: '12px',
+            fontFamily: 'Helvetica, Arial, sans-serif',
+            fontWeight: 400,
+            cssClass: 'apexcharts-xaxis-label',
+          },
+          offsetX: -10,
+          offsetY: 0,
         },
-        yaxis: {
-          categories: ['Number'],
-          labels: {
-            show: true,
-            style: {
-              colors: ['rgba(16, 253, 28, 0.5)'],
-              fontSize: '12px',
-              fontFamily: 'Helvetica, Arial, sans-serif',
-              fontWeight: 400,
-              cssClass: 'apexcharts-xaxis-label',
-            },
-            offsetX: -10,
-            offsetY: 0,
-          },
-          axisBorder: {
-            show: false,
-            color: '#000000',
-            height: 0,
-            width: 0,
-            offsetX: 0,
-            offsetY: 0
-          },
-        }
-    
+        axisBorder: {
+          show: false,
+          color: '#000000',
+          height: 0,
+          width: 0,
+          offsetX: 0,
+          offsetY: 0
+        },
+      }
+
 
     }
 
@@ -324,13 +334,20 @@ $.ajax({
         dashArray: 0,
       },
       series: [{
-        name: 'isTidal',
-        data: [numberOfFloods]
+        name: 'Level 2',
+        data: [counter1, counter2]
       }],
       xaxis: {
-        categories: ['Number'],
+        categories: ['Severe Flood Warning', 'Flood Warning'],
         labels: {
-          show: false,
+          show: true,
+                    style: {
+            colors: ['rgba(16, 253, 28, 0.5)', 'rgba(16, 253, 28, 0.5)'],
+            fontSize: '8px',
+            fontFamily: 'Helvetica, Arial, sans-serif',
+            fontWeight: 400,
+            cssClass: 'apexcharts-xaxis-label',
+          },
         }
       },
       yaxis: {
@@ -393,8 +410,8 @@ $.ajax({
       },
       series: [
         {
-          name: "Series 1",
-          data: [1, 2, 3, 4, 5, 6, 7]
+          name: "Severity Level Events",
+          data: [counter1, counter2, counter3, counter4]
         }
       ],
       fill: {
@@ -411,14 +428,21 @@ $.ajax({
       },
       xaxis: {
         categories: [
-          "01 Jan",
-          "02 Jan",
-          "03 Jan",
-          "04 Jan",
-          "05 Jan",
-          "06 Jan",
-          "07 Jan"
-        ]
+          "Level 1",
+          "Level 2",
+          "Level 3",
+          "Level 4",
+        ],
+        labels: {
+          show: true,
+                    style: {
+            colors: ['rgba(16, 253, 28, 0.5)', 'rgba(16, 253, 28, 0.5)', 'rgba(16, 253, 28, 0.5)', 'rgba(16, 253, 28, 0.5)'],
+            fontSize: '8px',
+            fontFamily: 'Helvetica, Arial, sans-serif',
+            fontWeight: 400,
+            cssClass: 'apexcharts-xaxis-label',
+          },
+        }
       },
       grid: {
         show: true,
@@ -467,6 +491,7 @@ $.ajax({
           offsetX: -10,
           offsetY: 0,
         },
+        
         axisBorder: {
           show: false,
           color: '#000000',
