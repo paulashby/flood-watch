@@ -1,11 +1,29 @@
 const locationElmts = $("#location");
 const locationBtn = locationElmts.find("#location-btn");
 const locationInput = locationElmts.find("#location-input");
+const severityFilter = $(".severity-filter");
 const API_KEY = "a5ecca38271f404f9ae5f7f8c2d005d6";
+
+let severityLevel = false;
 
 locationBtn.on("click", onLocation);
 locationInput.on("keypress", onLocationKeypress);
-locationInput.on("keyup", onLocationClear)
+locationInput.on("keyup", onLocationClear);
+severityFilter.on("click", onFilter);
+
+function onFilter(e) {
+    // Get requested severity level
+    const level = $(e.target).data("level");
+    // Ignore if not set
+    if (level) {
+        // Disable filter if this is a toggle operation
+        severityLevel = level === severityLevel ? false : level;
+        // Trigger event for interested parties
+        $(window).trigger("filterMarkers", [{
+            severity: severityLevel
+        }]);
+    }
+}
 
 function onLocationKeypress(e) {    
     const keycode = (e.keyCode ? e.keyCode : e.which);
