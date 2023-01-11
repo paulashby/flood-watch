@@ -1,5 +1,5 @@
 # Flood-Watch
-Search for historic flood events that happened in the UK
+A 4-Member Team Project
 
 ## Description
 * A dashboard where you can call -up UK flood warnings and pinpoint them on the map.
@@ -23,6 +23,7 @@ Refer to the MIT license in the repository.
 
 ## Credit
 N/A
+
 ## Deployed Site
 * https://sam010000101.github.io/flood-watch/
 
