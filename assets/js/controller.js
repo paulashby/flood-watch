@@ -34,7 +34,7 @@ $(document).ready(function () {
     function onLocationKeypress(e) {    
         const keycode = (e.keyCode ? e.keyCode : e.which);
         if (keycode == '13') {
-           onLocation();
+           onLocationInput();
         }
         // Prevent propogation to other possible handlers
         e.stopPropagation();
