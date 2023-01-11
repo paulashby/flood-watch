@@ -91,15 +91,40 @@ $.ajax({
       if (severity[i] == severity1) {
         counter1++;
 
+      else if (severity[i] == severity2) {
+        counter2++;
+      }
+
+      else if (severity[i] == severity3) {
+        counter3++;
+      }
+
+
+      else if (severity[i] == severity4) {
+        counter4++;
+      }
+        
+          };
+    console.log("Number of severity level 1 flood events " + counter1);
+    console.log("Number of severity level 2 flood events " + counter2);
+    console.log("Number of severity level 3 flood events " + counter3);
+    console.log("Number of severity level 4 flood events " + counter4);
+    console.log(counter1);
+    console.log(counter2);
+    console.log(counter3);
+    console.log(counter4);
+
+    // console.log(severity);
+    // console.log(severity.length);
+
+    //create an array from the results
+        
   // This is the script that renders each chart
 
   // Chart #1 - Number of Floods
   var options = {
     series: [numberOfFloods],
     chart: {
-      // events: {
-      //   animationEnd: onAnimationEnd
-      // },
       type: 'donut',
     },
     colors: ['rgba(16, 253, 28, 0.25)'],
@@ -119,18 +144,7 @@ $.ajax({
 
       }
 
-      else if (severity[i] == severity2) {
-        counter2++;
-      }
 
-      else if (severity[i] == severity3) {
-        counter3++;
-      }
-
-
-      else if (severity[i] == severity4) {
-        counter4++;
-      }
 
   chart.render()
     .then(function () {
@@ -139,24 +153,6 @@ $.ajax({
     }).catch(function (e) {
       console.log(116);
   });
-
-
-    };
-    console.log("Number of severity level 1 flood events " + counter1);
-    console.log("Number of severity level 2 flood events " + counter2);
-    console.log("Number of severity level 3 flood events " + counter3);
-    console.log("Number of severity level 4 flood events " + counter4);
-    console.log(counter1);
-    console.log(counter2);
-    console.log(counter3);
-    console.log(counter4);
-
-    // console.log(severity);
-    // console.log(severity.length);
-
-    //create an array from the results
-
-
 
 
     // This is the script that renders each chart
