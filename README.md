@@ -3,9 +3,9 @@ A 4-Member Team Project
 
 ## Description
 * A dashboard where you can call -up UK flood warnings and pinpoint them on the map.
-*The user can set the following user inputs as part of their search.
+* The user can set the following user inputs as part of their search.
 1. Location
-2. Severity; minimum severity value.
+2. Severity: minimum severity value.
 
 ## Installation
 * This is a web based application that needs no traditional installation. Rather, you just lauch the application from within the main folder by double clicking on the index.html file which launches into the landing page.
