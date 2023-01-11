@@ -8,7 +8,8 @@ A 4-Member Team Project
 2. Severity; minimum severity value.
 
 ## Installation
-Web based Application (Just launch it)
+* This is a web based application that needs no traditional installation. Rather, you just lauch the application from within the main folder by double clicking on the index.html file which launches into the landing page. From this landing page, you can then have access to all the flood related data by clicking on the button functionalities or just by hovering around the  charts which will fetch you the desired information.
+
 
 ## User Story
 * As a local authority representative, I want to know of flood warnings in advance so that I can alert residents and plan accordingly within my area of responsibility.
@@ -23,10 +24,13 @@ Refer to the MIT license in the repository.
 ## Credit
 N/A
 
-## Test page 
+## Deployed Site
+* https://sam010000101.github.io/flood-watch/
 
 ## Link to Github Repository
 https://github.com/Sam010000101/flood-watch
+
+## Screenshots:
 
 ## Contributors:
 * Sam Brooke
