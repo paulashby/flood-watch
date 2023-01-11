@@ -184,7 +184,8 @@
    flex: 60%; 
    background-color: #00410D;
    padding: 1rem 0rem 1rem 0rem;
-   visibility: hidden;
+   /* visibility: hidden; */
+   opacity: 0.5;
  }
 
  .rside {
