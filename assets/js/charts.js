@@ -166,7 +166,13 @@ $.ajax({
 
     var chart = new ApexCharts(document.querySelector("#chartOne"), options);
 
-    chart.render();
+    chart.render()
+      .then(function () {
+        // Trigger event for map which needs to resize
+        $(window).trigger("chartRendered");
+        }).catch(function (e) {
+        console.log(116);
+    });
 
 
 
