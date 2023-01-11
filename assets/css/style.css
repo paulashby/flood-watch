@@ -198,6 +198,14 @@
    border: #07b229;
  }
 
+ #history-btns {
+  width: 100%;
+ }
+
+ #history-btns .btn {
+  margin-left: -15px;
+ }
+
  .lower {
    flex: 100%;
    /* background-color: #00410D; */
