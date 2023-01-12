@@ -1,3 +1,4 @@
+
 # Flood-Watch
 A 4-Member Team Project
 
@@ -24,7 +25,9 @@ A 4-Member Team Project
 Refer to the MIT license in the repository.
 
 ## Credit
-N/A
+This uses Environment Agency flood and river level data from the real-time data API (Beta)
+
+The font Digital-7 is freeware for home use only, freeware software (credit needed) and for your education process.
 
 ## Deployed Site
 * https://sam010000101.github.io/flood-watch/
