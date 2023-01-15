@@ -4,110 +4,121 @@
 }
 
 * {
-   box-sizing: border-box;
- }
+  box-sizing: border-box;
+}
 
- /* Style the body */
- body {
-   min-height: 100vh;
-   font-family: digital;
-   margin: 0;
-   background: #00410D;
- }
+/* Style the body */
+body {
+  min-height: 100vh;
+  font-family: digital;
+  margin: 0;
+  background: #00410D;
+}
 
- /* Header/logo Title */
- .header {
-   margin: auto;
-   padding: 20px;
-   text-align: left;
-   background-color: black;
-   font-family: Arial, Helvetica, sans-serif;
-   /* background: #00410D; */
-   /* border-style: solid;
+/* Header/logo Title */
+.header {
+  margin: auto;
+  padding: 20px;
+  text-align: left;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background: #00410D; */
+  /* border-style: solid;
     border-color: #07b229; */
-   /* background-color:rgb(116, 152, 53); */
- }
+  /* background-color:rgb(116, 152, 53); */
+}
 
- p,
- h2,
- h3,
- h4,
- h5,
- h6 {
-   color: rgb(16, 253, 28);
- }
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(16, 253, 28);
+}
 
- .titles {
+.titles {
   color: rgb(16, 253, 100);
- }
+}
 
- /* Class for user buttons */
- .btn-outline-secondary {
-   color: rgb(16, 253, 28);
-   border-color: rgb(16, 253, 28);
- }
+/* Class for user buttons */
+.btn-outline-secondary {
+  color: rgb(16, 253, 28);
+  border-color: rgb(16, 253, 28);
+}
 
- /* Class for user input buttons on hover */
- .btn-outline-secondary:hover {
-   color: #00410D;
-   border-color: rgb(16, 253, 28);
- }
+/* Class for user input buttons on hover */
+.btn-outline-secondary:hover {
+  color: #00410D;
+  border-color: rgb(16, 253, 28);
+}
 
- .input-group {
-   /* display: flex;
+.input-group {
+  /* display: flex;
   justify-content: space-evenly; */
-   margin-right: 15px;
-   justify-content: center;
- }
+  margin-right: 15px;
+  justify-content: center;
+}
 
- .row-no-wrap {
-   display: flex;
-   flex-wrap: nowrap;
-   align-items: center;
-   margin-right: 10px;
- }
+.row-no-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-right: 10px;
+}
 
- .input-group-tickbox {
+.input-group-tickbox {
 
-   display: -ms-flexbox;
-   display: flex;
-   -ms-flex-align: center;
-   align-items: center;
-   padding: 0.187rem 0.3rem;
-   margin: 0px 0px 2px 0px;
-   /* margin-bottom: 0; */
-   /* font-size: 1rem; */
-   /* font-weight: 400; */
-   /* line-height: 1.5; */
-   gap: 5px;
-   color: rgb(16, 253, 28);
-   text-align: center;
-   white-space: nowrap;
-   background-color: black;
-   border: 1px solid rgb(16, 253, 28);
-   border-radius: 0.25rem;
- }
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.187rem 0.3rem;
+  margin: 0px 0px 2px 0px;
+  /* margin-bottom: 0; */
+  /* font-size: 1rem; */
+  /* font-weight: 400; */
+  /* line-height: 1.5; */
+  gap: 5px;
+  color: rgb(16, 253, 28);
+  text-align: center;
+  white-space: nowrap;
+  background-color: black;
+  border: 1px solid rgb(16, 253, 28);
+  border-radius: 0.25rem;
+}
 
- .tickbox-fw {
-   margin: 0px 5px 0px 0px;
- }
+.tickbox-fw {
+  margin: 0px 5px 0px 0px;
+}
 
- #severity-filters {
+#location-input-group {
+  margin-left: 0.5rem;
+}
+
+#severity-row {
+  margin-right: 10px;
+}
+
+#severity-filters {
+  width: 100%;
+  margin-right: 0;
+  justify-content: flex-end;
   cursor: pointer;
- }
+}
 
- #severity-filters input[type=checkbox] {
+#severity-filters input[type=checkbox] {
   display: none;
- }
+}
 
- .form-control {
-   margin-left: auto;
-   border-style: solid;
-   border-color: #0af038;
+.form-control {
+  margin-left: auto;
+  border-style: solid;
+  border-color: #0af038;
   padding-left: 0.375rem;
- }
+}
 
- /* .input-group-green {
+/* .input-group-green {
    margin-right: 5%;
    border-style: solid;
    border-color: #0af038;
@@ -118,141 +129,140 @@
  } */
 
 
- .btn:hover {
+.btn:hover {
 
-   background: rgb(16, 253, 28);
- }
+  background: rgb(16, 253, 28);
+}
 
 
-  .btn-wide {
-    display: flex;
-    flex-direction: column;
-    border-radius: 0;
-    padding:0.375rem 2.5rem;
-  }
+.btn-wide {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  padding: 0.375rem 2.5rem;
+}
 
- /* Background colour for the input fields */
- .form-control {
-   /* background: #8cf7a1; */
- }
+/* Background colour for the input fields */
+.form-control {
+  /* background: #8cf7a1; */
+}
 
- /* Makes the input field placeholder italics */
- ::-webkit-input-placeholder {
-   font-style: italic;
- }
+/* Makes the input field placeholder italics */
+::-webkit-input-placeholder {
+  font-style: italic;
+}
 
- :-moz-placeholder {
-   font-style: italic;
- }
+:-moz-placeholder {
+  font-style: italic;
+}
 
- ::-moz-placeholder {
-   font-style: italic;
- }
+::-moz-placeholder {
+  font-style: italic;
+}
 
- :-ms-input-placeholder {
-   font-style: italic;
- }
+:-ms-input-placeholder {
+  font-style: italic;
+}
 
- /* Peripheral elements sit in front of map */
- .fore {
+/* Peripheral elements sit in front of map */
+.fore {
   position: relative;
   z-index: 1;
- }
+}
 
- /* Column container */
- .row {
-   display: flex;
-   flex-wrap: wrap;
-   width: 100%;
-   margin-right: 0;
-   margin-left: 0;
- }
-
- /* Create two unequal columns that sits next to each other */
- /* Sidebar/left column */
- .lside {
-   flex: 14%;
-   /* background-color: #00410D; */
-   padding: 1rem 1.5rem 1rem 1.5rem;
-   margin-left: 1rem;
-   /* padding-left: 40px; */
-
- }
-
- /* Main column */
- .main {
-  /* changes the width of the right & left panels by changing the width of the main */
-   flex: 60%; 
-   background-color: #00410D;
-   padding: 1rem 0rem 1rem 0rem;
-   visibility: hidden;
- }
-
- .rside {
-  padding: 1rem 1.5rem 1rem 1.5rem;
-   margin-right: 1rem;
-   flex-wrap: wrap-reverse;
-   flex: 11%;
-   /* background-color: #00410D; */
-   border-style: solid;
-   border: #07b229;
- }
-
- #history-btns {
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
- }
+  margin-right: 0;
+  margin-left: 0;
+}
 
- #history-btns .btn {
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.lside {
+  flex: 14%;
+  /* background-color: #00410D; */
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  margin-left: 1rem;
+  /* padding-left: 40px; */
+
+}
+
+/* Main column */
+.main {
+  /* changes the width of the right & left panels by changing the width of the main */
+  flex: 60%;
+  background-color: #00410D;
+  padding: 1rem 0rem 1rem 0rem;
+  visibility: hidden;
+}
+
+.rside {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  margin-right: 1rem;
+  flex-wrap: wrap-reverse;
+  flex: 11%;
+  /* background-color: #00410D; */
+  border-style: solid;
+  border: #07b229;
+}
+
+#history-btns {
+  width: 100%;
+}
+
+#history-btns .btn {
   margin-left: -15px;
- }
+}
 
- .lower {
-   flex: 100%;
-   /* background-color: #00410D; */
-   padding: 0px 20px 0px 20px;
-   margin: 0px 20px 0px 20px;
+.lower {
+  flex: 100%;
+  /* background-color: #00410D; */
+  padding: 0px 20px 0px 20px;
+  margin: 0px 20px 0px 20px;
 
- }
+}
 
- /* Fake image, just for this example */
- .fakeimg {
-   background-color: rgb(0, 51, 0, 0.85);
-   width: 100%;
-   Height: 100%;
-   padding: 20px;
-   margin: 0.25rem 0rem 1rem 0rem;
-   border: 2px solid rgb(16, 253, 28);
-   box-shadow: 0px 0px 8px #4ff370;
-   border-radius: 10px;
- }
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: rgb(0, 51, 0, 0.85);
+  width: 100%;
+  Height: 100%;
+  padding: 20px;
+  margin: 0.25rem 0rem 1rem 0rem;
+  border: 2px solid rgb(16, 253, 28);
+  box-shadow: 0px 0px 8px #4ff370;
+  border-radius: 10px;
+}
 
- /* Charts */
- #chartOne,
- #chartTwo,
- #chartThree,
- #chartFour {
-   min-width: 150px;
- }
+/* Charts */
+#chartOne,
+#chartTwo,
+#chartThree,
+#chartFour {
+  min-width: 150px;
+}
 
- /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
- @media screen and (max-width: 700px) {
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
 
-   .row,
-   .navbar {
-     flex-direction: column;
-   }
- }
- 
+  .row,
+  .navbar {
+    flex-direction: column;
+  }
+}
+
 .title-block {
-  /* Control it */
   top: -25px;
   height: 25px;
-  /* End control */
   margin: 0;
   display: flex;
   align-items: center;
   background-color: black;
-  top: 15px;justify-content: flex-start;
+  top: 15px;
+  justify-content: flex-start;
 }
 
 .title-block::after {
@@ -266,22 +276,16 @@
   font-size: 1.14rem;
   left: 1.27rem;
   top: 72px;
- }
+}
 
- .neon {
-  /* Control it with this */
+.neon {
   top: 25px;
-  /* end control */
+  position: relative;
+  overflow: hidden;
+  filter: brightness(200%);
+}
 
-   position: relative;
-   overflow: hidden;
-   filter: brightness(200%);
-
-   /* width: 368.47px;
-   height: 56px; */
- }
-
- .neon .text {
+.neon .text {
   background-color: black;
   color: white;
   font-size: 6rem;
@@ -300,8 +304,9 @@
   color: white;
   filter: blur(0.02em);
   mix-blend-mode: difference;
- }
- .neon .full-name {
+}
+
+.neon .full-name {
   /* Show Title as initials */
   display: none;
 }
@@ -314,6 +319,9 @@
   display: none;
 }
 
+#severity-row {
+  margin-right: 10px;
+}
 
 
 
@@ -321,63 +329,49 @@
 
 
 
+/* End P bits */
 
- /* End P bits */
-
- .gradient {
-   position: absolute;
-   background: linear-gradient(45deg, #07b229, green, #00410D);
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   mix-blend-mode: multiply;
- }
-
- .spotlight {
-   position: absolute;
-   top: -100%;
-   left: -100%;
-   right: 0;
-   bottom: 0;
-   background:
-     radial-gradient(circle,
-       white,
-       transparent 25%) center / 25% 25%,
-     radial-gradient(circle,
-       white,
-       #00410D 0%) center / 12.5% 12.5%;
-   animation: light 5s linear infinite;
-   mix-blend-mode: color-dodge;
- }
-
- @keyframes light {
-   to {
-     transform: translate(50%, 50%);
-   }
- }
-
- footer {
-   height: 3.5rem;
- }
-
- .copyright-text {
-   padding-bottom: 20px;
-   background-color: black;
-   padding: 20px;
- }
- 
- /* ------------------- LOGO ----------------------*/
- #sub-title {
-  text-transform: uppercase;
-  color: #fff;
+.gradient {
   position: absolute;
-  z-index: 1;
-  font-size: 2.5rem;
-  left: 40vw;
-  width: 100px;
-  line-height: 2.45rem;
-  top: -8px;
+  background: linear-gradient(45deg, #07b229, green, #00410D);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: multiply;
+}
+
+.spotlight {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle,
+      white,
+      transparent 25%) center / 25% 25%,
+    radial-gradient(circle,
+      white,
+      #00410D 0%) center / 12.5% 12.5%;
+  animation: light 5s linear infinite;
+  mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+  to {
+    transform: translate(50%, 50%);
+  }
+}
+
+footer {
+  height: 3.5rem;
+}
+
+.copyright-text {
+  padding-bottom: 20px;
+  background-color: black;
+  padding: 20px;
 }
 
 @media screen and (min-width: 700px) {
@@ -386,44 +380,52 @@
   }
 }
 
- @media screen and (min-width: 445px) {
-  /* ----- OLD LOGO STYLES --------- */
+@media screen and (min-width: 445px) {
+  .title-block {
+    margin-left: 0.3rem;
+  }
+
   .neon {
-   position: relative;
-   overflow: hidden;
-   filter: brightness(200%);
-   width: 390px;
-   height: 56px;
-   /* Obscure right edge of gradient */
-   box-shadow: inset -35px 0 0 black;
- }
+    position: relative;
+    overflow: hidden;
+    filter: brightness(200%);
+    width: 390px;
+    height: 56px;
+    /* Obscure right edge of gradient */
+    box-shadow: inset -35px 0 0 black, inset 0 -35px 0 black, inset 0 35px 0 black;
+  }
 
- .neon .text {
-   background-color: black;
-   color: white;
-   font-size: 3.125rem;
-   font-weight: bold;
-   font-family: sans-serif;
-   text-transform: uppercase;
-   position: relative;
-   user-select: none;
-   line-height: 56px;
- }
+  .neon .text {
+    background-color: black;
+    color: white;
+    font-size: 3.125rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+    line-height: 56px;
+  }
 
- .neon .text::before {
-  display: inline;
-  content: "Flood Watch";
-  text-transform: uppercase;
-  position: absolute;
-  color: white;
-  filter: blur(0.02em);
-  mix-blend-mode: difference;
- }
- /* ----------- END OLD LOGO ----------- */
- .neon .full-name {
-  display: inline;
-}
- .title-block::after {
-  content: none;
- }
+  .neon .text::before {
+    display: inline;
+    content: "Flood Watch";
+    text-transform: uppercase;
+    position: absolute;
+    color: white;
+    filter: blur(0.02em);
+    mix-blend-mode: difference;
+  }
+
+  .neon .full-name {
+    display: inline;
+  }
+
+  .title-block::after {
+    content: none;
+  }
+
+  #location {
+    margin-top: 4.7rem;
+  }
 }
