@@ -78,10 +78,15 @@
 
   <!-- OpenLayers map -->
   <div id="map" class="map"></div>
+  
+  <div class="row fore" id="data-feed">
 
-  <!-- The flexible grid (content) -->
-  <!-- Left-side Panel -->
-  <div class="row fore">
+    <!-- Map proxy -->
+    <div class="main">
+      <p>Map Area</p>
+    </div>
+
+    <!-- Left-side Panel -->
     <div class="lside">
       <div class="fakeimg">
         <h2 class="titles mb-4"><strong>CHARTS</strong></h2>
@@ -104,42 +109,29 @@
       </div>
     </div>
 
-    <!-- map area -->
-    <div class="main">
-      <div class="fakeimg">
-        <p>Map Area</p>
-      </div>
-    </div>
-
     <!-- Right-side Panel -->
     <div class="rside">
       <div class="fakeimg">
-        <h4 class="titles mb-4"><strong>AGGREGATED DATA</strong></h4>
-        <h6 class="titles mb-2"><strong>NUMBER OF WARNINGS</strong></h6>
-
-        <div id="numberOfFloods"></div>
-        &nbsp;
-        <h6 class="titles mb-0"><strong>TIDAL vs NON-TIDAL</strong></h6>
-        &nbsp;
-        <!-- Chart #1 -->
-        <div class="mb-4" id="chartOne"></div>
-        &nbsp;
-        <h4 class="titles mb-4"><strong>SEARCH HISTORY</strong></h4>
-        <div class="row">
-          <div class="col" id="history-btns">
+        <div class="aggregated">
+          <h4 class="titles mb-4"><strong>AGGREGATED DATA</strong></h4>
+          <h6 class="titles mb-2"><strong>NUMBER OF WARNINGS</strong></h6>
+  
+          <div id="numberOfFloods"></div>
+          &nbsp;
+          <h6 class="titles mb-0"><strong>TIDAL vs NON-TIDAL</strong></h6>
+          &nbsp;
+          <!-- Chart #1 -->
+        <div class="mb-4" id="chartOne"></div></div>
+        <div class="history">
+          <h4 class="titles mb-4"><strong>SEARCH HISTORY</strong></h4>
+          <div class="row">
+            <div class="col" id="history-btns">
+            </div>
           </div>
-        </div>
+        </div>        
       </div>
     </div>
   </div>
-
-  <!-- <div class="row fore">
-    <div class="lower">
-      <div class="fakeimg">
-        <p>Data</p>
-      </div>
-    </div>
-  </div> -->
 
   <!-- Footer -->
   <footer class="footer fixed-bottom">
