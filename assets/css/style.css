@@ -71,7 +71,9 @@ h6 {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0.187rem 0.3rem;
+  /* padding: 0.187rem 0.3rem; */
+  padding: 0.38rem 0.3rem;
+  
   margin: 0px 0px 2px 0px;
   gap: 5px;
   color: rgb(16, 253, 28);
@@ -83,7 +85,13 @@ h6 {
 }
 
 .tickbox-fw {
-  margin: 0px 5px 0px 0px;
+  /* margin: 0px 5px 0px 0px; */
+  margin: 0 3px 0 2.5px;
+}
+
+#location {
+  margin-top: 7rem;
+  max-width: 24.55rem;
 }
 
 #location-input-group {
@@ -92,6 +100,10 @@ h6 {
 
 #severity-row {
   margin-right: 10px;
+}
+
+#level-label {
+  display: none;
 }
 
 #severity-filters {
@@ -277,18 +289,6 @@ h6 {
   display: none;
 }
 
-#location {
-  margin-top: 7rem;
-}
-
-#level-label {
-  display: none;
-}
-
-#severity-row {
-  margin-right: 10px;
-}
-
 .gradient {
   position: absolute;
   background: linear-gradient(45deg, #07b229, green, #00410D);
@@ -336,9 +336,22 @@ footer {
   .row {
     flex-direction: row;
   }
+  #header-components {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 565px) {
+  #location {
+    width: calc(100% - 15rem);
+  }
+  #severity-row {
+    margin-top: -3.4rem;
+  }
 }
 
 @media screen and (min-width: 445px) {
+
   .title-block {
     margin-left: 0.3rem;
   }
@@ -389,5 +402,5 @@ footer {
 
   #severity-filters {
     left: 0.77rem;
-}
+  }
 }
