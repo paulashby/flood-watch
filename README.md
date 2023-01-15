@@ -115,6 +115,7 @@ N.B. Please don't rely solely on Flood Watch to obtain your flood warnings! Floo
 One of the biggest challenges of the project was rendering the map with the pinpoints & making it focus on user input locations. Getting the map to work in the context of the dashboard & according to the project requirements as defined by the group, was challenging and time consuming with a steep learning-curve. 
 
 Paul Ashby's main area of focus on this project was getting the maps to work as planned. Our chosen map rendering library (OL maps) generated various files with unique references for every instance of the maps that was developed during the project. In the early stages of the project, in order to speed up the steep learning curve & mitigate the complexities of the workflow we agreed for Paul to create a separate repository to develop the maps which meant that he could push major developments periodically to the main repo. Here is Paul's map development [repo](https://github.com/paulashby/flood-watch-map).
+
 ![map polygon](./assets/images/polygon.png)
 
 Isolating & calling the relevant data from the EA API JSON objects was dealt with by Sam Brooke, the following example shows how the flood severityLevel values were indexed and then counted depending on their value;
