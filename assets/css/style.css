@@ -207,7 +207,7 @@ h6 {
   /* changes the width of the right & left panels by changing the width of the main */
   border: dotted 2px white;
   height: 100vw;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 .rside {
