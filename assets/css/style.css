@@ -38,6 +38,32 @@ h6 {
   color: rgb(16, 253, 28);
 }
 
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h2::after {
+  content:  "-------";
+  display: block;
+  line-height: 0.7rem;
+}
+
+h3::after {
+  content:  "-----------------";
+  display: block;
+  line-height: 0.7rem;
+}
+
+.history h3::after {
+  content:  "---------------";
+  display: block;
+  line-height: 0.7rem;
+}
+
 .titles {
   color: rgb(16, 253, 100);
 }
@@ -191,10 +217,24 @@ h6 {
   display: table;
 }
 
-.rside .fakeimg {
+.rside .fakeimg,
+#severity-charts {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+#severity-charts .chart {
+  flex: 100%;
+  /* height: 4rem; */
+}
+
+#chartTwo {
+  margin-bottom: 1rem;
+}
+
+#chartThree {
+  margin-bottom: 2rem;
 }
 
 .aggregated,
