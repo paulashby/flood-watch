@@ -1,5 +1,5 @@
 :root {
-  --footer-height: 3.5rem;
+  --footer-height: 6rem;
   --footer-margin: 1rem;
 }
 
@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   font-family: digital;
   margin: 0;
-  background: #00410D;
+  background: green;
 }
 
 /* Header/logo Title */
@@ -179,6 +179,14 @@ h3::after {
   font-style: italic;
 }
 
+#map-skirt {
+  position: absolute;
+  top: calc(100vh - 23px);
+  height: 25px;
+  width: 100vw;
+  background-color: green;
+}
+
 /* Peripheral elements sit in front of map */
 .fore {
   position: relative;
@@ -200,14 +208,12 @@ h3::after {
   padding-bottom: calc(var(--footer-height) + var(--footer-margin));
   width: calc(100vw - 30px);
 }
-/* Create two unequal columns that sits next to each other */
 
 /* Sidebar/left column */
 .main,
 .lside,
 .rside {
   padding: 1rem 0;
-  /* flex: 100% 0 0; */
   flex: 100%;
   margin: 0;
 }
@@ -217,8 +223,7 @@ h3::after {
   display: table;
 }
 
-.rside .fakeimg,
-#severity-charts {
+.rside .fakeimg {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -226,7 +231,6 @@ h3::after {
 
 #severity-charts .chart {
   flex: 100%;
-  /* height: 4rem; */
 }
 
 #chartTwo {
@@ -244,10 +248,9 @@ h3::after {
 
 /* Main column */
 .main {
-  /* changes the width of the right & left panels by changing the width of the main */
-  border: dotted 2px white;
   height: 100vw;
-  visibility: hidden;
+  border: dotted 2px white;
+  /* visibility: hidden; */
 }
 
 .rside {
@@ -389,7 +392,23 @@ h3::after {
 }
 
 footer {
+  font-family: Arial, Helvetica, sans-serif;
   height: var(--footer-height);
+}
+
+footer p {
+  text-align: center;
+}
+
+footer p:first-child {
+  margin-top: 0.2rem;
+  line-height: 1rem;
+}
+
+footer #osm-txt {
+  color: #00921a;
+  font-size: 0.8rem;
+  line-height: 0.5rem;
 }
 
 .copyright-text {
@@ -452,54 +471,45 @@ footer {
   #severity-filters {
     left: 0.77rem;
   }
-
-
 }
 
 @media screen and (min-width: 565px) {
-  #location {
-    width: calc(100% - 15rem);
-  }
-  #severity-row {
-    margin-top: -3.4rem;
-  }
-}
-
-@media screen and (min-width: 675px) {
   #header-components {
     flex-direction: column;
     align-items: flex-end;
   }
+  
   #location {
+    width: calc(100% - 15rem);
     left: -15rem;
   }
-
-  .main {
-    /* flex: 50% 2 2; */
-    flex: 60%;
-  }
-
-  .lside {
-    /* flex: 50% 2 2; */
-    flex: 40%;
-  }
-
-  .main {
-    order: 2;
+  #severity-row {
+    margin-top: -3.4rem;
   }
 
   .lside {
     order: 1;
+    flex: 40%;
+  }
+
+  .main {
+    height: calc(100vh - calc(var(--footer-height) + 57px));
+    order: 2;
+    flex: 40%;
+    height: auto;
   }
 
   .rside {
     order: 3;
   }
+}
 
-  /* .aggregated,
-  .history {
-    flex: 50%;
+@media screen and (min-width: 675px) {
+  /* #header-components {
+    flex-direction: column;
+    align-items: flex-end;
   } */
+
 }
 
 @media screen and (min-width: 850px) {
@@ -517,12 +527,6 @@ footer {
   .rside {
     order: 3;
   }
-
-  /* .aggregated,
-  .history {
-    flex: 100%;
-  } */
-}
 
 @media screen and (min-width: 1055px) {
   .header {

@@ -78,6 +78,9 @@
 
   <!-- OpenLayers map -->
   <div id="map" class="map"></div>
+
+  <!-- Map skirt -->
+  <div id="map-skirt"></div>
   
   <div class="row fore" id="data-feed">
 
@@ -90,7 +93,7 @@
     <div class="lside">
       <div class="fakeimg">
         <h2 class="titles mb-4"><strong>Update</strong></h2>
-        <div class="row">
+        <div class="row" id="row-lside">
           <div class="col" id="severity-charts">
 
             <!-- <div class="chart unit-2">              
@@ -155,6 +158,7 @@
   <footer class="footer fixed-bottom">
     <div class="copyright-text">
       <p>&#169; Da-Vinci Coders</p>
+      <p id="osm-txt">Map: &#169; OpenStreetMap Contributors</p>
     </div>
   </footer>
 
