@@ -19,20 +19,19 @@
   <!-- Header -->
   <div class="header fore">
     <!-- Flood Watch Shimmering Logo -->
-    <div class="row">
-      <div class="col">
+    <div class="row" id="header-components">
+      <div class="col title-block">
         <div class="neon">
-          <span class="text" data-text="Flood Watch">Flood Watch</span>
-          <span class="gradient"></span>
-          <span class="spotlight"></span>
+          <h1><span class="text">F<span class="full-name">lood </span>W<span class="full-name">atch</span></span>
+            <span class="gradient"></span>
+            <span class="spotlight"></span>
+          </h1>
         </div>
       </div>
-      <!-- Column as a Spacer -->
-      <div class="col">
-      </div>
+      
       <!-- Location Input -->
-      <div class="col">
-        <div class="input-group mb-3" id="location">
+      <div class="col" id="location">
+        <div class="input-group mb-3" id="location-input-group">
           <div class="input-group-prepend">
             <button class="btn btn-outline-secondary" type="button" id="location-btn">Location</button>
           </div>
@@ -41,12 +40,12 @@
         </div>
       </div>
       <!-- Severity Level Inputs -->
-      <div class="row-no-wrap">
+      <div class="row-no-wrap" id="severity-row">
         <div class="input-group mb-3" id="severity-filters">
           <!-- Level 1 -->
           <div class="input-group-prepend ml-2 severity-filter">
             <div class="input-group-tickbox">
-              <p class="tickbox-fw pl-1 pr-1" data-level="1">Severity Level 1</p>
+              <p class="tickbox-fw pl-1 pr-1" data-level="1">Severity<span id="level-label"> Level</span> 1</p>
               <input type="checkbox" aria-label="Checkbox for following text input">
             </div>
           </div>
@@ -80,72 +79,66 @@
   <!-- OpenLayers map -->
   <div id="map" class="map"></div>
 
-  <!-- The flexible grid (content) -->
-  <!-- Left-side Panel -->
-  <div class="row fore">
+  <!-- Map skirt -->
+  <div id="map-skirt"></div>
+  
+  <div class="row fore" id="data-feed">
+
+    <!-- Map proxy -->
+    <div class="eng-bounds">
+      <p>Map Area</p>
+    </div>
+
+    <!-- Left-side Panel -->
     <div class="lside">
       <div class="fakeimg">
-        <h2 class="titles mb-4"><strong>CHARTS</strong></h2>
-        <div class="row">
-          <div class="col">
-            <!-- Chart #2 -->
-            <h6 class="titles"><strong>FLOOD SEVERITY LEVELS</strong></h6>
+        <h2 class="titles mb-4"><strong>Update</strong></h2>
+        <div class="row" id="row-lside">
+          <div class="col" id="severity-charts">
+                         
+            <h4 class="titles"><strong>Flood severity levels</strong></h4>
             <div id="chartTwo"></div>
-            &nbsp;
-            <h6 class="titles"><strong>SIGNIFICANT FLOOD EVENTS</strong></h6>
+
+            <h4 class="titles"><strong>Significant flood events</strong></h4>
             <div id="chartThree"></div>
-            &nbsp;
-            <!-- Chart #4 -->
-            <h6 class="titles"><strong>FLOOD SEVERITY CURVE</strong></h6>
-            <div id="chartFour"></div>
-            &nbsp;
+
+            <h4 class="titles"><strong>Flood severity curve</strong></h4>
+            <div id="chartFour"></div>          
 
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- map area -->
-    <div class="main">
-      <div class="fakeimg">
-        <p>Map Area</p>
       </div>
     </div>
 
     <!-- Right-side Panel -->
     <div class="rside">
       <div class="fakeimg">
-        <h4 class="titles mb-4"><strong>AGGREGATED DATA</strong></h4>
-        <h6 class="titles mb-2"><strong>NUMBER OF WARNINGS</strong></h6>
-
-        <div id="numberOfFloods"></div>
-        &nbsp;
-        <h6 class="titles mb-0"><strong>TIDAL vs NON-TIDAL</strong></h6>
-        &nbsp;
-        <!-- Chart #1 -->
-        <div class="mb-4" id="chartOne"></div>
-        &nbsp;
-        <h4 class="titles mb-4"><strong>SEARCH HISTORY</strong></h4>
-        <div class="row">
-          <div class="col" id="history-btns">
+        <div class="aggregated">
+          <h3 class="titles mb-4"><strong>Aggregated data</strong></h3>
+          <h4 class="titles mb-2"><strong>Number of warnings</strong></h4>
+  
+          <div id="numberOfFloods"></div>
+          &nbsp;
+          <h4 class="titles mb-0"><strong>Tidal vs non-tidal</strong></h4>
+          &nbsp;
+          <!-- Chart #1 -->
+        <div class="mb-4" id="chartOne"></div></div>
+        <div class="history">
+          <h3 class="titles mb-4"><strong>Search history</strong></h3>
+          <div class="row">
+            <div class="col" id="history-btns">
+            </div>
           </div>
-        </div>
+        </div>        
       </div>
     </div>
   </div>
 
-  <!-- <div class="row fore">
-    <div class="lower">
-      <div class="fakeimg">
-        <p>Data</p>
-      </div>
-    </div>
-  </div> -->
-
   <!-- Footer -->
-  <footer>
+  <footer class="footer fixed-bottom">
     <div class="copyright-text">
-      <p>&copy Da-Vinci Coders</p>
+      <p>&#169; Da-Vinci Coders</p>
+      <p id="osm-txt">Map: &#169; OpenStreetMap Contributors</p>
     </div>
   </footer>
 
@@ -158,11 +151,7 @@
   <script src="./assets/js/charts.js"></script>
   <script src="./data/flood-areas.js"></script>
 
-  <!-- jquery link -->
-  <!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script> -->
-
   <!-- Bootstrap JS Links -->
-  <script type=“module” crossorigin src=“./assets/js/index.2d06ef2c.js”></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
     crossorigin="anonymous"></script>
@@ -171,7 +160,7 @@
     crossorigin="anonymous"></script>
 
   <!-- OpenLayers map link -->
-  <script type="module" crossorigin src="./assets/js/index.b83ecd49.js"></script>
+  <script type="module" crossorigin src="./assets/js/index.ec5127bf.js"></script>
 
   <!-- Respond to user input -->
   <script src="./assets/js/controller.js"></script>
