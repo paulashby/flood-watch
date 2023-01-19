@@ -114,7 +114,9 @@ N.B. Please don't rely solely on Flood Watch to obtain your flood warnings! Floo
 ## Challenges:
 One of the biggest challenges of the project was rendering the map with the pinpoints & making it focus on user input locations. Getting the map to work in the context of the dashboard & according to the project requirements as defined by the group, was challenging and time consuming with a steep learning-curve. 
 
-Paul Ashby's main area of focus on this project was getting the maps to work as planned. Our chosen map rendering library (OL maps) generated various files with unique references for every instance of the maps that was developed during the project. In the early stages of the project, in order to speed up the steep learning curve & mitigate the complexities of the workflow we agreed for Paul to create a separate repository to develop the maps which meant that he could push major developments periodically to the main repo. Here is Paul's map development [repo](https://github.com/paulashby/flood-watch-map).
+Paul Ashby's main area of focus on this project was getting the maps to work as planned. Our chosen map rendering library (OL maps) generated various files with unique references for every instance of the maps that was developed during the project. 
+
+The [recommended way](https://openlayers.org/download/) to use OpenLayers is to install the npm package locally and run <kbd>create</kbd> to generate a development folder. As we were initially unsure that the OpenLayers library would pan out, we felt it would be cleaner to use a [separate repo](https://github.com/paulashby/flood-watch-map) so as not to pollute the codebase. Updates were regularly pushed to the main Flood Watch repo for integration testing. Here is Paul's map development [repo](https://github.com/paulashby/flood-watch-map).
 
 ![map polygon](./assets/images/polygon.png)
 
