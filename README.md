@@ -112,7 +112,7 @@ Flood Watch utilises the following API's;
 N.B. Please don't rely solely on Flood Watch to obtain your flood warnings! Flood watch is not designed to be the definitive &/or sole source for critical flood warnings &/or of flood warning data. You should always consider official recommendations & guidelines pertaining to flood warnings & floods! 
 
 ## Challenges:
-One of the biggest challenges of the project was rendering the map with the pinpoints & making it focus on user input locations. Getting the map to work in the context of the dashboard & according to the project requirements as defined by the group a challenging task. 
+One of the biggest challenges of the project was rendering the map with the pinpoints & making it focus on user input locations. Getting the map to work in the context of the dashboard & according to the project requirements as defined by the group was a challenging task. 
 
 Paul Ashby's main area of focus on this project was getting the maps to work as planned. Our chosen map rendering library (OL maps) generated various files with unique references for every instance of the maps that was developed during the project. 
 
