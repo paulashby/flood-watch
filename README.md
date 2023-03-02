@@ -112,13 +112,11 @@ Flood Watch utilises the following API's;
 N.B. Please don't rely solely on Flood Watch to obtain your flood warnings! Flood watch is not designed to be the definitive &/or sole source for critical flood warnings &/or of flood warning data. You should always consider official recommendations & guidelines pertaining to flood warnings & floods! 
 
 ## Challenges:
-One of the biggest challenges of the project was rendering the map with the pinpoints & making it focus on user input locations. Getting the map to work in the context of the dashboard & according to the project requirements as defined by the group, was challenging and time consuming with a steep learning-curve. 
+One of the biggest challenges of the project was rendering the map with the pinpoints & making it focus on user input locations. Getting the map to work in the context of the dashboard & according to the project requirements as defined by the group a challenging task. 
 
 Paul Ashby's main area of focus on this project was getting the maps to work as planned. Our chosen map rendering library (OL maps) generated various files with unique references for every instance of the maps that was developed during the project. 
 
-The [recommended way](https://openlayers.org/download/) to use OpenLayers is to install the npm package locally and run <kbd>create</kbd> to generate a development folder. As we were initially unsure that the OpenLayers library would pan out, we felt it would be cleaner to use a [separate repo](https://github.com/paulashby/flood-watch-map) so as not to pollute the codebase. Updates were regularly pushed to the main Flood Watch repo for integration testing. Here is Paul's map development [repo](https://github.com/paulashby/flood-watch-map).
-
-![map polygon](./assets/images/polygon.png)
+The [recommended way](https://openlayers.org/download/) to use OpenLayers is to install the npm package locally and run <kbd>create</kbd> to generate a development folder. As we were initially unsure that the OpenLayers library would pan out, we felt it would be cleaner to use a [separate repo](https://github.com/paulashby/flood-watch-map) so as not to pollute the codebase. Updates were regularly pushed to the main Flood Watch repo for integration testing.
 
 Isolating & calling the relevant data from the EA API JSON objects was dealt with by Sam Brooke, the following example shows how the flood severityLevel values were indexed and then counted depending on their value;
 
