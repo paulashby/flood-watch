@@ -22,11 +22,9 @@ $(document).ready(function () {
         const level = $(e.target).data("level");
         // Ignore if not set
         if (level) {
-            // Disable filter if this is a toggle operation
-            severityLevel = level === severityLevel ? false : level;
             // Trigger event for interested parties
             $(window).trigger("filterMarkers", [{
-                severity: severityLevel
+                severity: level
             }]);
         }
     }
