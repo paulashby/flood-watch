@@ -36,7 +36,7 @@ $(document).ready(function () {
         if (keycode == '13') {
            onLocationInput();
         }
-        // Prevent propogation to other possible handlers
+        // Prevent propagation to other possible handlers
         e.stopPropagation();
     }
 
