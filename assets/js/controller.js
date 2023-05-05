@@ -61,8 +61,7 @@ $(document).ready(function () {
                 .then(function (response) {
 
                     if (!response?.results.length) {
-                        // No data
-                        console.log("No data available - ideally switch to a fallback API");
+                        showStatus("No data currently available for this location");
                     } else {
                         const lat = response.results[0].geometry.lat;
                         const lng = response.results[0].geometry.lng;
@@ -76,8 +75,7 @@ $(document).ready(function () {
                             .then(function (response) {
 
                                 if (!response.items.length) {
-                                    // No data
-                                    console.log("No data available - ideally switch to a fallback API");
+                                    showStatus("No data currently available for this location");
                                 } else {
                                     itemData = response.items;
                                     updateHistory(location);
@@ -92,7 +90,7 @@ $(document).ready(function () {
                 });
 
         } else {
-            console.log("Please enter the name of a town, city or county");
+            showStatus("Please enter a valid location name");
         }
     }
     
@@ -141,5 +139,14 @@ $(document).ready(function () {
             location = $(e.target).attr("data-location");
             onLocation();
         }
+    }
+
+    function showStatus(message) {
+        const statusElmt = $(".status-message");
+        statusElmt.addClass("show").children().text(message);
+
+        setTimeout(function() {
+            statusElmt.removeClass("show");
+        }, 2500);
     }
 });

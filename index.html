@@ -28,7 +28,7 @@
           </h1>
         </div>
       </div>
-      
+
       <!-- Location Input -->
       <div class="col" id="location">
         <div class="input-group mb-3" id="location-input-group">
@@ -39,6 +39,7 @@
             aria-label="Example text with button addon" aria-describedby="location-btn" id="location-input">
         </div>
       </div>
+
       <!-- Severity Level Inputs -->
       <div class="row-no-wrap" id="severity-row">
         <div class="input-group mb-3" id="severity-filters">
@@ -76,12 +77,17 @@
     </div>
   </div>
 
+  <!-- Status message -->
+  <div class="status-message panel">
+    <p></p>
+  </div>
+
   <!-- OpenLayers map -->
   <div id="map" class="map"></div>
 
   <!-- Map skirt -->
   <div id="map-skirt"></div>
-  
+
   <div class="row fore" id="data-feed">
 
     <!-- Map proxy -->
@@ -91,11 +97,11 @@
 
     <!-- Left-side Panel -->
     <div class="lside">
-      <div class="fakeimg">
+      <div class="fakeimg panel">
         <h2 class="titles mb-4"><strong>Update</strong></h2>
         <div class="row" id="row-lside">
           <div class="col" id="severity-charts">
-                         
+
             <h4 class="titles"><strong>Flood severity levels</strong></h4>
             <div id="chartTwo"></div>
 
@@ -103,7 +109,7 @@
             <div id="chartThree"></div>
 
             <h4 class="titles"><strong>Flood severity curve</strong></h4>
-            <div id="chartFour"></div>          
+            <div id="chartFour"></div>
 
           </div>
         </div>
@@ -112,24 +118,25 @@
 
     <!-- Right-side Panel -->
     <div class="rside">
-      <div class="fakeimg">
+      <div class="fakeimg panel">
         <div class="aggregated">
           <h3 class="titles mb-4"><strong>Aggregated data</strong></h3>
           <h4 class="titles mb-2"><strong>Number of warnings</strong></h4>
-  
+
           <div id="numberOfFloods"></div>
           &nbsp;
           <h4 class="titles mb-0"><strong>Tidal vs non-tidal</strong></h4>
           &nbsp;
           <!-- Chart #1 -->
-        <div class="mb-4" id="chartOne"></div></div>
+          <div class="mb-4" id="chartOne"></div>
+        </div>
         <div class="history">
           <h3 class="titles mb-4"><strong>Search history</strong></h3>
           <div class="row">
             <div class="col" id="history-btns">
             </div>
           </div>
-        </div>        
+        </div>
       </div>
     </div>
   </div>
